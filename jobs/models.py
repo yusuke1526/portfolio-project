@@ -5,4 +5,4 @@ class Job(models.Model):
         return self.summary
     image = models.ImageField(upload_to='images/')
     summary = models.CharField(max_length=200)
-    url = models.URLField(null=True)
+    url = models.URLField(null=True, blank=True)
