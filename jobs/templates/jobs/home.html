@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+
 <main role="main">
 
   <section class="jumbotron text-center">
     <div class="container">
-    <h1>Hi, I'm Yusuke.</h1>
-      <p class="lead text-muted">Hey, my name is Yusuke Ueda and I'm studying Machine Learning. I wanna develop completely safe autonomous vehicle!</p>
+      <h1>Hi, I'm Yusuke.</h1>
+      <p class="lead text-muted">Hey, my name is Yusuke Ueda and I'm studying Machine Learning. I wanna develop
+        completely safe autonomous vehicle!</p>
       <p>
         <a href="mailto:418810@m.mie-u.ac.jp" class="btn btn-primary my-2">Email Me</a>
       </p>
-      <img src="{%static 'me.jpeg'%}" height=200 width=200/>
+      <img src="{%static 'me.jpeg'%}" height=200 width=200 />
     </div>
   </section>
 
@@ -23,9 +25,9 @@
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
             {% if job.url is not None %}
-            <a href="{{job.url}}"><img class="card-img-top" src="{{job.image.url}}" /></a>
+            <a href="{{job.url}}"><img class="card-img-top img-fit" src="{{job.image.url}}" /></a>
             {% else %}
-            <img class="card-img-top" src="{{job.image.url}}" />
+            <img class="card-img-top img-fit" src="{{job.image.url}}" />
             {% endif %}
             <div class="card-body">
               <p class="card-text">{{job.summary}}</p>
@@ -41,4 +43,3 @@
 </main>
 
 {% endblock %}
-
