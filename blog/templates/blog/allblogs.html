@@ -14,7 +14,7 @@
             <a href="{% url 'detail' blog.id %}"><h3>{{blog.title}}</h3></a>
             <time>{{blog.pub_date_pretty}}</time>
             <br />
-            <img class="img-fluid" src="{{blog.image.url}}" height=200 width=200/>
+            <img class="img-fluid img-fit-blog" src="{{blog.image.url}}"/>
             <br />
             <p>{{blog.summary}}</p>
         </div>
